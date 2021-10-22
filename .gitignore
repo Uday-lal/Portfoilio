@@ -32,9 +32,6 @@ FirebaseServiceAccountCred.json
 # __pycache__
 __pycache__
 
-# firebase
-src/firebase
-
 # python .env
 server/.env
 
