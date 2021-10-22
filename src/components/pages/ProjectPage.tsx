@@ -44,7 +44,11 @@ class ProjectPage extends Component {
           <a href="/" id="Nav-header">
             Uday Lal
           </a>
-          <a href="#" style={{ margin: "25px" }}>
+          <a
+            href="https://drive.google.com/file/d/10rFxb6zKTm2ABvmg3uJV66TsagVGvE4X/view?usp=sharing"
+            target="_blank"
+            style={{ margin: "25px" }}
+          >
             Resume
           </a>
         </nav>

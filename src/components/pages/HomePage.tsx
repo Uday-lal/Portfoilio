@@ -48,7 +48,12 @@ function HomePage() {
               <a href="#contact">Contact</a>
             </li>
             <li className="link">
-              <a href="#">Resume</a>
+              <a
+                href="https://drive.google.com/file/d/10rFxb6zKTm2ABvmg3uJV66TsagVGvE4X/view?usp=sharing"
+                target="_blank"
+              >
+                Resume
+              </a>
             </li>
           </ul>
           <div
