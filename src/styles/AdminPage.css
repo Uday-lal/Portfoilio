@@ -1,0 +1,71 @@
+section.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
+section.profile-section > div.profile-img > img {
+  width: 20vw;
+  height: 20vh;
+}
+
+div.profile-info {
+  margin: 5px;
+}
+
+h1#admin-name {
+  margin: 10px 0px;
+}
+
+section.tabs-section {
+  padding: 20px;
+}
+
+span.MuiTabs-indicator {
+  background-color: white;
+}
+
+section.tool-section {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+section.project-section {
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.tool-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  width: 90vw;
+}
+
+div.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  width: 90vw;
+}
+
+@media (max-width: 648px) {
+  section.tool-section {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+}

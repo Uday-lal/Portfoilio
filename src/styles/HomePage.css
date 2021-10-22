@@ -1,0 +1,156 @@
+/* Nav Styles */
+nav#home-page-nav,
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a#Nav-header {
+  margin: 25px;
+  font-size: 2.5rem;
+}
+
+ul.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 25px;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main */
+/* Hero Section */
+section.Hero-Section {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+section.Hero-Section > div.left-side-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px;
+}
+
+section.Hero-Section > div.left-side-content > h1 {
+  font-weight: bold;
+  word-spacing: 0.313rem;
+  font-size: 3vw;
+}
+
+section.Hero-Section > div.right-side-content {
+  padding: 20px;
+}
+
+section.Hero-Section > div.right-side-content > img {
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+/* Showcase sections */
+section.showcase-sections {
+  margin: 0px 25px;
+}
+
+span.bar {
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  margin: 2.5px;
+  border-radius: 10px;
+}
+
+div#hamburger {
+  display: none;
+}
+
+a.popup-nav-link {
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+  border-radius: 5px;
+  width: 90%;
+  text-align: center;
+}
+
+a.popup-nav-link:hover {
+  background-color: #f8f8ff;
+  color: black;
+  font-weight: bolder;
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 648px) {
+  li#contact-link {
+    display: none;
+  }
+
+  ul#home-page-links {
+    display: none;
+  }
+
+  div#hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  a#Nav-header {
+    font-size: 2rem;
+  }
+
+  section.Hero-Section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  section.Hero-Section > div.right-side-content > img {
+    width: 300px;
+    height: 300px;
+  }
+
+  section.Hero-Section > div.left-side-content > h1 {
+    font-size: 4.5vw;
+  }
+
+  section.showcase-sections > h2 {
+    font-size: 20px;
+  }
+
+  section#contact {
+    display: none;
+  }
+
+  section.tool-section > div.tool-case > img {
+    width: 8vw;
+    height: 6vh;
+  }
+
+  section.tool-section > div.tool-case > div.progress {
+    height: 10px;
+  }
+
+  section.tool-section > div.tool-case > div.progress > div.progress-bar {
+    height: 10px;
+  }
+
+  section.tool-section > div.tool-case {
+    height: 50px;
+  }
+
+  section.tool-section {
+    width: 0px;
+  }
+}

@@ -1,0 +1,18 @@
+div.contact-card {
+  width: 40vw;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+form#contact-form {
+  display: block;
+}
+
+form#contact-form > * {
+  margin: 10px 0px;
+}
+
+form#contact-form > textarea {
+  width: 36vw;
+}

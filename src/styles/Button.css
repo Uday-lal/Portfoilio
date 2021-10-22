@@ -1,0 +1,11 @@
+button {
+  padding: 10px;
+  border: none;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.2rem;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+}

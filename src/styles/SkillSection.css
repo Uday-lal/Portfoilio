@@ -1,0 +1,84 @@
+div.skill-card {
+  padding: 10px;
+  display: flex;
+  width: 300px;
+  height: 110px;
+  transition: ease-in-out 0.2s;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+section#skill-section {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+  justify-content: center;
+  width: 90vw;
+}
+
+div.skill-card:hover {
+  transform: scale(1.06);
+  transition: ease-in-out 0.2s;
+}
+
+@media (max-width: 648px) {
+  section#skill-section {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+    justify-content: center;
+    width: 25vw;
+  }
+}
+
+@media (max-width: 439px) {
+  section#skill-section {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+    justify-content: center;
+    width: 15vw;
+  }
+}
+
+@media (max-width: 392px) {
+  section#skill-section {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+    justify-content: center;
+    width: 5vw;
+  }
+}
+
+@media (max-width: 375px) {
+  section#skill-section {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+    justify-content: center;
+    width: 0vw;
+  }
+}
+
+@media (max-width: 346px) {
+  section#skill-section {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+    justify-content: center;
+    width: 10vw;
+  }
+
+  section#skill-section > div.grid > div.skill-card {
+    padding: 10px;
+    display: flex;
+    width: 250px;
+    height: 100px;
+    transition: ease-in-out 0.2s;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+}

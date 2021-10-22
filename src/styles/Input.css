@@ -1,0 +1,61 @@
+input {
+  padding: 10px 20px;
+  background-color: #555564;
+  border-radius: 100px;
+  transition: 0.4s;
+  color: white;
+  border-style: none;
+  margin: 5px;
+  width: 100%;
+  outline: none;
+  font-family: "Comfortaa", cursive;
+}
+
+input:focus {
+  outline: none;
+  transition: 0.4s;
+  box-shadow: 0px 4px 20px 2px #9ec2d3;
+}
+
+input::placeholder {
+  font-family: "Comfortaa", cursive;
+  color: rgba(246, 246, 246, 0.77);
+}
+
+input:-ms-input-placeholder {
+  font-family: "Comfortaa", cursive;
+  color: rgba(246, 246, 246, 0.77);
+}
+
+input::-ms-input-placeholder {
+  font-family: "Comfortaa", cursive;
+  color: rgba(246, 246, 246, 0.77);
+}
+
+textarea {
+  padding: 10px 10px;
+  background-color: #555564;
+  border-radius: 10px;
+  transition: 0.4s;
+  color: white;
+  border-style: none;
+  margin: 5px;
+  width: 100%;
+  outline: none;
+  font-family: "Comfortaa", cursive;
+}
+
+textarea::placeholder {
+  font-family: "Comfortaa", cursive;
+  color: rgba(246, 246, 246, 0.77);
+}
+
+textarea:-ms-input-placeholder {
+  font-family: "Comfortaa", cursive;
+  color: rgba(246, 246, 246, 0.77);
+}
+
+textarea::-ms-input-placeholder {
+  font-family: "Comfortaa", cursive;
+  color: rgba(246, 246, 246, 0.77);
+}

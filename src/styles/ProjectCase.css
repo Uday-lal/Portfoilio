@@ -1,0 +1,34 @@
+div.project-case {
+  width: 75vw;
+  margin: 20px 0px;
+  position: relative;
+}
+
+div.project-case > div.project-case-header {
+  padding: 10px;
+}
+
+@media (max-width: 660px) {
+  div.project-case > div.project-case-header > div.middle-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  div.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.buttons > a {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  div.buttons > a#custom-a > button {
+    width: 100%;
+  }
+
+  div.project-case > div.project-case-header > p {
+    font-size: 3vw;
+  }
+}

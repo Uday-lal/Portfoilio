@@ -1,0 +1,24 @@
+section.project-page-img > img {
+  width: 50vw;
+  height: 50vh;
+}
+
+section.project-page-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.project-page-projects {
+  padding: 20px;
+}
+
+section.project-page-projects > h1 {
+  font-size: 35px;
+}
+
+div#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

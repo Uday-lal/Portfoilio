@@ -1,0 +1,45 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# python venv
+/server/venv
+
+# FirebaseServiceAccountCred
+FirebaseServiceAccountCred.json
+
+# python test
+/server/test
+
+# __pycache__
+__pycache__
+
+# firebase
+src/firebase
+
+# python .env
+server/.env
+
+# production
+production
+
+# store
+store.json
