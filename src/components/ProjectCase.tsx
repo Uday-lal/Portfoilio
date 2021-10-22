@@ -76,8 +76,6 @@ function ProjectCase(props: ProjectCaseProps) {
     );
   };
 
-  console.log(props);
-
   return (
     <React.Fragment>
       <Popup
