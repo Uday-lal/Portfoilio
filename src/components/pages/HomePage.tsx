@@ -108,7 +108,8 @@ function HomePage() {
               Skills
             </a>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/10rFxb6zKTm2ABvmg3uJV66TsagVGvE4X/view?usp=sharing"
+              target="_blank"
               onClick={() => onPopupClose()}
               className="popup-nav-link"
               style={{ zIndex: 2 }}
