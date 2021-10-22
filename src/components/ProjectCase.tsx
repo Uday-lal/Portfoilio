@@ -178,7 +178,7 @@ function ProjectCase(props: ProjectCaseProps) {
                         height: "25px",
                         margin: "0px 5px",
                       }}
-                      src="./assets/Github-Light-32px.png"
+                      src="./assets/GitHub-Light32px.png"
                       alt="github-logo"
                     />
                     View Github

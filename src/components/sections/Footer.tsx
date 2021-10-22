@@ -19,7 +19,7 @@ function Footer() {
             </a>
             <a href="https://github.com/Uday-lal" target="_blank">
               <img
-                src="./assets/Github-Light64px.png"
+                src="./assets/GitHub-Light64px.png"
                 alt="github-logo"
                 style={{ width: "40px", height: "40px" }}
               />
