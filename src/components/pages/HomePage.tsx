@@ -122,7 +122,7 @@ function HomePage() {
           <section className="Hero-Section">
             <div className="left-side-content">
               <h1>
-                I build and design the backend of web, mobile and desktop
+                I build and design the backend and frontend of web, mobile and desktop
                 applications.
               </h1>
               <SlideButton onClick={() => window.location.replace("projects")}>
