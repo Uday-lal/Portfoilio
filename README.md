@@ -9,3 +9,7 @@
 ✔ Cloud Storage<br />
 ✔ NoSQL Database<br />
 ✔ Api calls<br />
+
+### Let me tell you how it works!
+The entire backend of the site has two components. <br />
+<b>🔥Firebase</b> and <b>🐱‍🏍Heroku</b> <br />
