@@ -3,7 +3,7 @@
 <br />
 <p>This is my online developer portfolio which contains both frontend and bactend. Yes it is very different and powerful compair to other portfolios it has a admin section from where i can control the entire website.</p>
 
-##Features includes
+## Features includes
 ✔ Authentication and authorization
 ✔ CRUD Operations
 ✔ Cloud Storage
