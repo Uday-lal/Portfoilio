@@ -5,7 +5,6 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
-// import MakeRequests from "../../MakeRequests";
 import "../../styles/Contact.css";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
