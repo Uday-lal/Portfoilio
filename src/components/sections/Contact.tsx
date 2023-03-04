@@ -5,7 +5,7 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
-import MakeRequests from "../../MakeRequests";
+// import MakeRequests from "../../MakeRequests";
 import "../../styles/Contact.css";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
@@ -36,15 +36,15 @@ function Contact() {
     e.preventDefault();
     if (name !== "" && email !== "" && message !== "") {
       reset();
-      const messageData = {
-        name: name,
-        email: email,
-        message: message,
-      };
-      const makeRequests = new MakeRequests();
-      makeRequests.makeRequest("/messaging", "POST", messageData, () =>
-        setOpen(true)
-      );
+      // const messageData = {
+      //   name: name,
+      //   email: email,
+      //   message: message,
+      // };
+      // const makeRequests = new MakeRequests();
+      // makeRequests.makeRequest("/messaging", "POST", messageData, () =>
+      // );
+      setOpen(true);
     }
   };
 
@@ -61,10 +61,12 @@ function Contact() {
         <form id="contact-form" onSubmit={handleSubmit}>
           <Input
             placeholder="Name"
+            style={{ width: "87%" }}
             onChange={(e: any) => setName(e.target.value)}
           />
           <Input
             placeholder="Email"
+            style={{ width: "87%" }}
             onChange={(e: any) => setEmail(e.target.value)}
           />
           <textarea

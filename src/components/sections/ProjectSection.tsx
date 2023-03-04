@@ -89,11 +89,8 @@ function ProjectSection(props: ProjectSectionProps) {
     // });
     try {
       const toolsDataObj = await getDocs(toolsCollections);
-      const toolsData = toolsDataObj.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      console.log(toolsData);
+      const toolsData = toolsDataObj.docs.map((doc) => doc.id);
+      setIds(toolsData);
     } catch (err) {
       console.error(err);
     }

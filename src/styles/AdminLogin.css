@@ -47,14 +47,7 @@ div.card > h2 {
 
 input {
   padding: 15px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  height: 90%;
-  align-items: center;
-  justify-content: space-around;
+  margin: 10px;
 }
 
 button#login-button:hover {

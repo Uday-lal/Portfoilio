@@ -4,7 +4,7 @@ import Container from "../Container";
 import Card from "../Card";
 import Input from "../Input";
 import SlideButton from "../SlideButton";
-import Grid from "../Grid";
+import Grid from "@mui/material/Grid";
 import "../../styles/AdminLogin.css";
 
 interface LoginState {
@@ -97,40 +97,54 @@ class AdminLogin extends Component {
           <h1 className="shadow-text">Admin login</h1>
         </nav>
         <Container>
-          <Grid offsets="60% 40%" width="95vw" height="70vh">
-            <div className="img-container">
-              <img src="./assets/login.svg" alt="login" />
-            </div>
-            <div className="form-container">
-              <Card width="30vw" height="50vh" id="admin-login">
-                <h2 className="shadow-text">Login</h2>
-                <div className="form">
-                  <form onSubmit={this.handleSubmit}>
-                    <Input
-                      placeholder="Admin email"
-                      type="email"
-                      onChange={this.handleUpdates}
-                      name="email"
-                    />
-                    <Input
-                      placeholder="Password"
-                      type="password"
-                      onChange={this.handleUpdates}
-                      name="password"
-                    />
-                    <SlideButton
-                      id="login-button"
-                      style={{
-                        fontSize: "1rem",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      Login
-                    </SlideButton>
-                  </form>
-                </div>
-              </Card>
-            </div>
+          <Grid container spacing={2}>
+            <Grid item xs={8}>
+              <div className="img-container">
+                <img src="./assets/login.svg" alt="login" />
+              </div>
+            </Grid>
+            <Grid item xs={3} style={{ display: "contents" }}>
+              <div className="form-container">
+                <Card width="100%" height="35vh" id="admin-login">
+                  <h2 className="shadow-text">Login</h2>
+                  <div className="form">
+                    <form onSubmit={this.handleSubmit}>
+                      <Input
+                        placeholder="Admin email"
+                        type="email"
+                        onChange={this.handleUpdates}
+                        name="email"
+                      />
+                      <Input
+                        placeholder="Password"
+                        type="password"
+                        onChange={this.handleUpdates}
+                        name="password"
+                      />
+                      <div
+                        className="btn-container"
+                        style={{
+                          width: "100%",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <SlideButton
+                          id="login-button"
+                          style={{
+                            fontSize: "1rem",
+                            backgroundColor: "black",
+                            margin: "20px",
+                          }}
+                        >
+                          Login
+                        </SlideButton>
+                      </div>
+                    </form>
+                  </div>
+                </Card>
+              </div>
+            </Grid>
           </Grid>
         </Container>
       </React.Fragment>

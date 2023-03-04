@@ -50,7 +50,17 @@ function ToolSection(props: ToolSectionProps) {
 
   return (
     <React.Fragment>
-      <section className="tool-section">
+      <section
+        className="tool-section"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          margin: "15px 0px",
+          flexDirection: "column",
+          justifyContent: "center",
+          width: "90vw",
+        }}
+      >
         <Box sx={{ display: progressDisplay }}>
           <CircularProgress style={{ color: "white" }} />
         </Box>

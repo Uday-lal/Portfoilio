@@ -48,13 +48,6 @@ class ProjectPage extends Component {
 
   componentDidMount() {
     this.getProjects();
-    // fetch("https://portfoil.herokuapp.com/api/projects").then((responce) => {
-    //   if (responce.ok) {
-    //     responce.json().then((result) => {
-    //       this.setState({ projects: result.results, progressDisplay: "none" });
-    //     });
-    //   }
-    // });
   }
 
   render() {
@@ -65,7 +58,7 @@ class ProjectPage extends Component {
             Uday Lal
           </a>
           <a
-            href="https://drive.google.com/file/d/10rFxb6zKTm2ABvmg3uJV66TsagVGvE4X/view?usp=sharing"
+            href="/assets/resume.pdf"
             target="_blank"
             style={{ margin: "25px" }}
           >

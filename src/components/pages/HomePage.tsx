@@ -49,8 +49,9 @@ function HomePage() {
             </li>
             <li className="link">
               <a
-                href="https://drive.google.com/file/d/10rFxb6zKTm2ABvmg3uJV66TsagVGvE4X/view?usp=sharing"
+                href="/assets/resume.pdf"
                 target="_blank"
+                style={{ margin: "25px" }}
               >
                 Resume
               </a>
@@ -108,7 +109,7 @@ function HomePage() {
               Skills
             </a>
             <a
-              href="https://drive.google.com/file/d/10rFxb6zKTm2ABvmg3uJV66TsagVGvE4X/view?usp=sharing"
+              href="/assets/resume.pdf"
               target="_blank"
               onClick={() => onPopupClose()}
               className="popup-nav-link"
@@ -122,8 +123,8 @@ function HomePage() {
           <section className="Hero-Section">
             <div className="left-side-content">
               <h1>
-                I build and design the backend and frontend of web, mobile and desktop
-                applications.
+                I build and design the backend and frontend of web, mobile and
+                desktop applications.
               </h1>
               <SlideButton onClick={() => window.location.replace("projects")}>
                 View Projects
