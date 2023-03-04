@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import SkillPopup from "../popups/SkillPopup";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import { collection, getDocs } from "firebase/firestore";
+import FirebaseAccess from "../../firebase/config";
 import "../../styles/SkillSection.css";
 
 interface SkillState {
@@ -25,14 +27,26 @@ function SkillSection(props: SkillSectionProps) {
   const [popupName, setPopupName] = useState("");
   const [skillId, setSkillId] = useState("");
   const [progressDisplay, setProgressDisplay] = useState("flex");
+  const firebaseAccess = new FirebaseAccess();
+  const db = firebaseAccess.getFirestoreDb();
+  const skillsCollections = collection(db, "Skills");
+
+  const getSkills = async function () {
+    try {
+      const skillsDataObj = await getDocs(skillsCollections);
+      const skillsData = skillsDataObj.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProgressDisplay("none");
+      setSkillState(skillsData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
-    fetch("https://portfoil.herokuapp.com/api/skills").then((response) => {
-      response.json().then((result: SkillState[]) => {
-        setProgressDisplay("none");
-        setSkillState(result);
-      });
-    });
+    getSkills();
   }, [""]);
 
   return (

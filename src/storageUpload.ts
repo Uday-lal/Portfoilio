@@ -1,4 +1,4 @@
-import storage from "./firebase/config";
+import FirebaseAccess from "./firebase/config";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 function storageUpload(
@@ -13,6 +13,8 @@ function storageUpload(
       const metaData = {
         contentType: selectedFile.type,
       };
+      const firebase = new FirebaseAccess();
+      const storage = firebase.getStorage();
       const storageRef = ref(storage, selectedFile.name);
       const uploadTask = uploadBytesResumable(
         storageRef,

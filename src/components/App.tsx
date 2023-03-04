@@ -16,7 +16,7 @@ function App() {
   });
   return (
     <div className="App">
-      <div
+      {/* <div
         style={{
           width: "100%",
           height: "100vh",
@@ -51,8 +51,8 @@ function App() {
             website will live by 4-3-2023
           </h2>
         </div>
-      </div>
-      {/* <Router>
+      </div> */}
+      <Router>
         <Switch>
           {state.pages.map((page) => (
             <Route exact path={page.route} key={page.id}>
@@ -60,7 +60,7 @@ function App() {
             </Route>
           ))}
         </Switch>
-      </Router> */}
+      </Router>
     </div>
   );
 }

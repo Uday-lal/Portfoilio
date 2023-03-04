@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ToolCase from "../ToolCase";
 import CircularProgress from "@mui/material/CircularProgress";
+import { collection, getDocs } from "firebase/firestore";
+import FirebaseAccess from "../../firebase/config";
 import Box from "@mui/material/Box";
 
 interface Tool {
@@ -20,13 +22,26 @@ function ToolSection(props: ToolSectionProps) {
   let setTools: any;
   [tools, setTools] = useState([]);
   const [progressDisplay, setProgressDisplay] = useState("flex");
+  const firebaseAccess = new FirebaseAccess();
+  const db = firebaseAccess.getFirestoreDb();
+  const toolsCollections = collection(db, "tool");
+
+  const getTools = async function () {
+    try {
+      const toolsDataObj = await getDocs(toolsCollections);
+      const toolsData = toolsDataObj.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProgressDisplay("none");
+      setTools(toolsData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
-    fetch("http://localhost:5000/api/tool").then((responce) => {
-      responce.json().then((data: Tool[]) => {
-        setProgressDisplay("none");
-        setTools(data);
-      });
-    });
+    getTools();
   }, tools);
 
   const authToken = localStorage.getItem("auth_token")

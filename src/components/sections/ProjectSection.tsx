@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCase from "../ProjectCase";
 import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import FirebaseAccess from "../../firebase/config";
 
 interface ProjectSectionProps {
   isAdmin: boolean;
@@ -28,6 +30,9 @@ function ProjectSection(props: ProjectSectionProps) {
   let setIds: any;
   [ids, setIds] = useState([]);
   [projectState, setProjectState] = useState([]);
+  const firebaseAccess = new FirebaseAccess();
+  const db = firebaseAccess.getFirestoreDb();
+  const toolsCollections = collection(db, "projects");
 
   const makeRequestFormGithub = () => {
     const url = "https://api.github.com/users/Uday-lal/repos";
@@ -74,14 +79,24 @@ function ProjectSection(props: ProjectSectionProps) {
     return languages_;
   };
 
-  const makeApiCall = () => {
-    fetch("https://portfoil.herokuapp.com/api/projects").then((responce) => {
-      if (responce.ok) {
-        responce.json().then((result) => {
-          setIds(result.ids);
-        });
-      }
-    });
+  const makeApiCall = async () => {
+    // fetch("https://portfoil.herokuapp.com/api/projects").then((responce) => {
+    //   if (responce.ok) {
+    //     responce.json().then((result) => {
+    //       setIds(result.ids);
+    //     });
+    //   }
+    // });
+    try {
+      const toolsDataObj = await getDocs(toolsCollections);
+      const toolsData = toolsDataObj.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      console.log(toolsData);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   useEffect(() => {

@@ -4,6 +4,8 @@ import ProjectCase from "../ProjectCase";
 import Footer from "../sections/Footer";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import { collection, getDocs } from "firebase/firestore";
+import FirebaseAccess from "../../firebase/config";
 import "../../styles/ProjectPage.css";
 
 interface Languages {
@@ -27,14 +29,32 @@ class ProjectPage extends Component {
     progressDisplay: "flex",
   };
 
+  async getProjects() {
+    const firebaseAccess = new FirebaseAccess();
+    const db = firebaseAccess.getFirestoreDb();
+    const toolsCollections = collection(db, "projects");
+    try {
+      const toolsDataObj = await getDocs(toolsCollections);
+      const toolsData = toolsDataObj.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      console.log(toolsData);
+      this.setState({ projects: toolsData, progressDisplay: "none" });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   componentDidMount() {
-    fetch("https://portfoil.herokuapp.com/api/projects").then((responce) => {
-      if (responce.ok) {
-        responce.json().then((result) => {
-          this.setState({ projects: result.results, progressDisplay: "none" });
-        });
-      }
-    });
+    this.getProjects();
+    // fetch("https://portfoil.herokuapp.com/api/projects").then((responce) => {
+    //   if (responce.ok) {
+    //     responce.json().then((result) => {
+    //       this.setState({ projects: result.results, progressDisplay: "none" });
+    //     });
+    //   }
+    // });
   }
 
   render() {
