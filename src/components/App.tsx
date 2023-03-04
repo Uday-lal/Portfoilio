@@ -16,7 +16,43 @@ function App() {
   });
   return (
     <div className="App">
-      <Router>
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "black",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <img
+            src="/assets/maintenance.svg"
+            style={{ width: "40%", height: "40%" }}
+            alt="Maintenance Image"
+          />
+          <h2
+            style={{
+              color: "white",
+              textAlign: "center",
+              width: "80%",
+              marginTop: "50px",
+            }}
+          >
+            Uday's portfolio website is under mentaince right now 😊. This
+            website will live by tomorrow
+          </h2>
+        </div>
+      </div>
+      {/* <Router>
         <Switch>
           {state.pages.map((page) => (
             <Route exact path={page.route} key={page.id}>
@@ -24,7 +60,7 @@ function App() {
             </Route>
           ))}
         </Switch>
-      </Router>
+      </Router> */}
     </div>
   );
 }

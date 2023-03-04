@@ -21,7 +21,7 @@ function ToolSection(props: ToolSectionProps) {
   [tools, setTools] = useState([]);
   const [progressDisplay, setProgressDisplay] = useState("flex");
   useEffect(() => {
-    fetch("https://portfoil.herokuapp.com/api/tool").then((responce) => {
+    fetch("http://localhost:5000/api/tool").then((responce) => {
       responce.json().then((data: Tool[]) => {
         setProgressDisplay("none");
         setTools(data);
