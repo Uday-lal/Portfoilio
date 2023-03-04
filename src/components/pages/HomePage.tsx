@@ -42,10 +42,20 @@ function HomePage() {
           </a>
           <ul className="nav-links" id="home-page-links">
             <li className="link">
+              <a href="https://github.com/Uday-lal" target="_blank">
+                Github
+              </a>
+            </li>
+            <li className="link">
               <a href="#skills">Skills</a>
             </li>
             <li className="link" id="contact-link">
-              <a href="#contact">Contact</a>
+              <a
+                href="https://www.linkedin.com/in/uday-lal-03418621a"
+                target="_blank"
+              >
+                Contact
+              </a>
             </li>
             <li className="link">
               <a
