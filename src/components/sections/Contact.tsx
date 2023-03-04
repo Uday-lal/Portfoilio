@@ -36,14 +36,6 @@ function Contact() {
     e.preventDefault();
     if (name !== "" && email !== "" && message !== "") {
       reset();
-      // const messageData = {
-      //   name: name,
-      //   email: email,
-      //   message: message,
-      // };
-      // const makeRequests = new MakeRequests();
-      // makeRequests.makeRequest("/messaging", "POST", messageData, () =>
-      // );
       setOpen(true);
     }
   };
