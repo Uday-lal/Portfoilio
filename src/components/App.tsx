@@ -48,7 +48,7 @@ function App() {
             }}
           >
             Uday's portfolio website is under mentaince right now 😊. This
-            website will live by tomorrow
+            website will live by 4-3-2023
           </h2>
         </div>
       </div>
